@@ -26,4 +26,7 @@ jobs:
       run: |
         $HOME/miniconda/bin/conda env create -f environment.yml
     - name: Run Flake8
-      run: $HOME/miniconda/bin/conda run -n c19-data flake8 
+      run: |
+        eval "$(conda shell.bash hook)"
+        conda activate c19-data
+        flake8 . --count --statistics
