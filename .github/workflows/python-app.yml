@@ -26,4 +26,4 @@ jobs:
       run: |
         $HOME/miniconda/bin/conda env create -f environment.yml
     - name: Run Flake8
-      run: $HOME/miniconda3/bin/conda run -n c19-data flake8 
+      run: $HOME/miniconda/bin/conda run -n c19-data flake8 
