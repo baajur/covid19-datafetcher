@@ -25,6 +25,9 @@ jobs:
     - name: Install dependencies
       run: |
         $HOME/miniconda/bin/conda env create -f environment.yml
+    - name: Init env
+      run: |
+        $HOME/miniconda/bin/conda init bash
         $HOME/miniconda/bin/conda activate c19-data
     - name: Run Flake8
       run: flake8 
